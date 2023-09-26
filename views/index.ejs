@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/main.css">
+    <title>Chuck Norris Joke</title>
+</head>
+<body>
+    <h1>Chuck Norris Joke</h1>
+    
+    <% if (data) { %>
+        <p><strong>Joke:</strong> <%= data.value %></p>
+        <img src="<%= data.icon_url %>" alt="Chuck Norris Icon">
+        <img src="<%= data.url %>" alt="chuck norris api">
+    <% } else if (error) { %>
+        <p><strong>Error:</strong> <%= error %></p>
+    <% } else { %>
+        <p>Loading...</p>
+    <% } %>
+</body>
+</html>
